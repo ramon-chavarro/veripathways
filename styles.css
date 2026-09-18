@@ -513,6 +513,10 @@ section {
     margin: 0;
 }
 
+.testimonial-card-wide {
+    grid-column: 1 / -1;
+}
+
 .testimonial-card blockquote p {
     color: var(--vp-primary);
     font-size: 1.08rem;
