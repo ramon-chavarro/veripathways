@@ -1,6 +1,23 @@
 const mobileBreakpoint = window.matchMedia("(max-width: 700px)");
 const precisePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-const consultationUrl = "https://calendar.app.google/QWCmZcuxgJFNvqA4A";
+const consultationEmail = "info@veripathways.com";
+const consultationSubject = "Consultation Appointment";
+const consultationBody = [
+    "Hello,",
+    "",
+    "I'd like to schedule a consultation with Veripathways. Here is my information to get started:",
+    "",
+    "- First Name:",
+    "- Last Name:",
+    "- Email Address:",
+    "- Phone Number:",
+    "- High School:",
+    "- Cumulative GPA:",
+    "- ACT/SAT Score:",
+    "",
+    "Thank you, and I look forward to hearing from you!"
+].join("\n");
+const consultationUrl = `mailto:${consultationEmail}?subject=${encodeURIComponent(consultationSubject)}&body=${encodeURIComponent(consultationBody)}`;
 
 document.querySelectorAll("[data-consultation-link]").forEach((link) => {
     link.href = consultationUrl;
